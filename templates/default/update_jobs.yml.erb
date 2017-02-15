@@ -1,0 +1,8 @@
+- job:
+    name: 'update jobs'
+    project-type: freestyle
+    description: 'A basic example of a `jjb` job that echos "Hello world and cats out /etc/password"'
+    builders:
+        - shell: |
+            #!/bin/bash
+            jenkins-jobs --conf /jjb/etc/jenkins_jobs.ini update /jjb/jobs/
